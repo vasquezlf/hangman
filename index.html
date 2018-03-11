@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SImple JS Hangman</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="assets/javascript/game.js"></script>
+</head>
+  <body>
+      <!-- NAV -->
+    <nav class="top-bar">
+        <div class="top-bar-left">
+            <h3>Simple JS Hangman</h3>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+            <li><a href='#'>Wrong Guesses: <span id="wrong-guesses">0</span></a></li>
+            <li><a href='#'>Wins: <span id="wins">0</span></a></li>
+            <li><a href='#'>Losses: <span id="losses">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO | display <canvas> here -->
+    <section class="hero">
+        
+    </section>
+
+    <!-- MAIN | Output word here-->
+    <main>
+        <button type="button" class="primary button expanded" id="new-game">New Game</button>
+        <!-- Container for displaying blanks  -->
+        <section class="word-container">
+            <!-- Div where blanks will be created by js -->
+        </section>
+        
+    </main>
+          
+<!-- 
+    <h1 class="header">Simple JS Hangman</h1>
+    <h2>Press any key to start guessing.</h2>
+    <h3>You have made <span id="wrong-guesses">0</span> errors.</h3>
+     -->
+    <div id="hangman-word"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/javascript/vendor/jquery.js"></script>
+    <script src="assets/javascript/vendor/what-input.js"></script>
+    <script src="assets/javascript/vendor/foundation.js"></script>
+    <script src="assets/javascript/app.js"></script>
+  </body>
+</html>
