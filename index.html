@@ -13,7 +13,6 @@
     <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="assets/javascript/game.js"></script>
 </head>
   <body>
       <!-- NAV -->
@@ -31,28 +30,28 @@
     </nav>
 
     <!-- HERO | display <canvas> here -->
-    <section class="hero">
-        
+    <section class="header">
+            <canvas id="hangman-canvas"></canvas>
     </section>
 
     <!-- MAIN | Output word here-->
     <main>
         <button type="button" class="primary button expanded" id="new-game">New Game</button>
         <!-- Container for displaying blanks  -->
-        <section class="word-container">
-            <!-- Div where blanks will be created by js -->
-        </section>
-        
+        <div id="hangman-word">
+                <div class="wrapper">
+                        <section class="word-container">
+                                <!-- Div where blanks will be created by js -->
+                            </section>
+                </div>        
+        </div>
     </main>
-          
-<!-- 
-    <h1 class="header">Simple JS Hangman</h1>
-    <h2>Press any key to start guessing.</h2>
-    <h3>You have made <span id="wrong-guesses">0</span> errors.</h3>
-     -->
-    <div id="hangman-word"></div>
+
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/javascript/canvas.js"></script>        
+    <script src="assets/javascript/game.js"></script>    
     <script src="assets/javascript/vendor/jquery.js"></script>
     <script src="assets/javascript/vendor/what-input.js"></script>
     <script src="assets/javascript/vendor/foundation.js"></script>

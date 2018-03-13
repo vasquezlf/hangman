@@ -2,11 +2,12 @@ $(document).ready(function() {
     // Declare global variables
     var wrongGuesses = 0
     var wins = 0, losses = 0
-    var maxGuesses = 10
+    var maxGuesses = 7
     var hangmanWord =''
     var input = ''
     var letterIndex = 0
     var letterIndeces = []
+    var hangTheManCounter = 0;
     
 
     //Computer picks random word from array everytime #new-word button is clicked
@@ -64,6 +65,17 @@ $(document).ready(function() {
         if (letterIndex === -1) {
             wrongGuesses++
             $('#wrong-guesses').text(wrongGuesses)
+
+            // *** Call hangTheMan object and run its methods every wrong answer
+            // to add stickman on <canvas>
+            
+            hangTheMan[hangTheManCounter]()
+            hangTheManCounter++
+
+            if (hangTheManCounter === 7) {
+                hangTheManCounter = 0
+                console.log("hangTheManCounter set to '0'")
+            }
         }
         // IF User loses if there are 10 wrong guesses
         if (wrongGuesses === maxGuesses) {
@@ -85,3 +97,4 @@ $(document).ready(function() {
 
     })
 }) //END document.ready
+
